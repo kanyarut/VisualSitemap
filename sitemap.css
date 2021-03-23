@@ -27,7 +27,6 @@
   align-items: flex-start;
   margin: 0 0 calc(var(--item-gap) / 2);
   position: relative;
-
 }
 .vsitemap ul > li:before {
   content: "";
@@ -38,6 +37,8 @@
   width: calc(var(--item-gap) / 2);
   background: var(--color-line);
 }
+
+/* Draw Line */
 .vsitemap ul > li:first-child:before {
   width: var(--item-gap);
   left: calc(-1 * var(--item-gap));
@@ -62,6 +63,7 @@
   display: none;
 }
 
+/* Box Item */
 .vsitemap small {
   line-height: 1.5em;
   position: relative;
@@ -87,7 +89,56 @@
   background: var(--color-accent);
   color: var(--color-accent-tint);
 }
-/* End Vertical Sitemap */
+
+/* Responsive */
+/* tablet */
+@media only screen and (max-width: 768px) {
+  .vsitemap > ul > li > ul > li ul li{
+    flex-direction: column;
+  }
+  .vsitemap > ul > li > ul > li ul li ul{
+    margin-top: calc(var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li > ul li:after {
+    left: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li > ul > li li:first-child:before {
+    width: calc(var(--item-gap)/2);
+    left: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li > ul > li li:first-child:after{
+    top: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li > ul > li li:only-child:after {
+    display: block;
+    height: calc(var(--item-gap)/2 + 1em);
+  }
+}
+/* mobile */
+@media only screen and (max-width: 576px) {
+  .vsitemap > ul > li ul li{
+    flex-direction: column;
+  }
+  .vsitemap > ul > li ul li ul{
+    margin-top: calc(var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul li:after {
+    left: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li li:first-child:before {
+    width: calc(var(--item-gap)/2);
+    left: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li li:first-child:after{
+    top: calc(-1 * var(--item-gap)/2);
+  }
+  .vsitemap > ul > li > ul > li li:only-child:after {
+    display: block;
+    height: calc(var(--item-gap)/2 + 1em);
+  }
+}
+
+/***** End Vertical Sitemap *****/
 
 /***** Horizontal Sitemap *****/
 .hsitemap  * {
@@ -103,7 +154,7 @@
   position: relative;
 }
 .hsitemap ul ul ul {
-  margin: 0 var(--item-gap);
+  margin: 0 0 0 var(--item-gap);
   text-align: left;
 }
 .hsitemap > ul > li {
@@ -188,7 +239,7 @@
   z-index: 1;
 }
 .hsitemap > ul > li > ul > li:first-child:before {
-  left: calc(50% - var(--item-gap));
+  left: calc(50% - var(--item-gap) /2);
 }
 .hsitemap > ul > li > ul > li:last-child:before {
   right: 50%;
@@ -224,4 +275,4 @@
   bottom: auto;
   height: calc(var(--item-gap)/2 + 1em);
 }
-/* End Horizontal Sitemap */
+/***** End Horizontal Sitemap *****/
