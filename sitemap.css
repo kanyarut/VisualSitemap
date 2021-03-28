@@ -231,7 +231,7 @@
   content: "";
   position: absolute;
   top: calc(-1 * var(--item-gap)/2);
-  left: calc(-1 * var(--item-width));
+  left: -50%;
   bottom: auto;
   right: 0;
   height: 1px;
