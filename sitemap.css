@@ -242,7 +242,7 @@
   left: calc(50% - var(--item-gap) /2);
 }
 .hsitemap > ul > li > ul > li:last-child:before {
-  right: 50%;
+  right: calc(100% - var(--item-width) / 2);
 }
 
 /* Vertical line for level 3 down */
