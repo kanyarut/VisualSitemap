@@ -6,7 +6,7 @@
   --color-accent-tint: #FFF;
   --color-line: #ccc;
 
-  --item-width: 160px;
+  --item-width: 200px;
   --item-gap: 20px;
 }
 /***** Vertical Sitemap *****/
@@ -231,7 +231,7 @@
   content: "";
   position: absolute;
   top: calc(-1 * var(--item-gap)/2);
-  left: calc(-1 * var(--item-gap));
+  left: calc(-1 * var(--item-width));
   bottom: auto;
   right: 0;
   height: 1px;
